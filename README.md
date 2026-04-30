@@ -4,6 +4,8 @@
 
 # homebridge-fritz-platform
 
+> ⚠️ **This is a community fork** of the original [SeydX/homebridge-fritz-platform](https://github.com/SeydX/homebridge-fritz-platform), updated to work with **Homebridge v2** (released May 2026) and HAP-NodeJS v1. The original project is no longer actively maintained for v2. All credit for the plugin goes to the original author [@SeydX](https://github.com/SeydX).
+
 [![npm](https://img.shields.io/npm/v/homebridge-fritz-platform.svg?style=flat-square)](https://www.npmjs.com/package/homebridge-fritz-platform)
 [![npm](https://img.shields.io/npm/dt/homebridge-fritz-platform.svg?style=flat-square)](https://www.npmjs.com/package/homebridge-fritz-platform)
 [![GitHub last commit](https://img.shields.io/github/last-commit/SeydX/homebridge-fritz-platform.svg?style=flat-square)](https://github.com/SeydX/homebridge-fritz-platform)
@@ -11,14 +13,27 @@
 [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.gg/kqNCe2D)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square&maxAge=2592000)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP4T3KASWQLD8)
 
-**Creating and maintaining Homebridge plugins consume a lot of time and effort, if you would like to share your appreciation, feel free to "Star" or donate.** [Click here](https://github.com/SeydX) to review more of my plugins.
-
-[Click here](https://github.com/SeydX) to review more of my plugins.
-
 
 ## Info
 
 > Compatible with **Homebridge v1.6+** and **Homebridge v2**. Requires **Node.js 18.20+, 20.15+ or 22**.
+
+### Installing this fork
+
+Since this fork is not published on npm, install it directly from GitHub.
+
+**Local clone (development / testing):**
+
+```bash
+git clone https://github.com/minhtuannguyen/homebridge-fritz-platform.git
+cd homebridge-fritz-platform
+npm install
+sudo npm link                # exposes the package globally
+sudo npm link homebridge-fritz-platform   # in your homebridge user dir
+sudo hb-service restart
+```
+
+After installing you may need to **remove the old plugin entry** in the Homebridge UI, because the original `homebridge-fritz-platform` package on npm and this fork share the same plugin name.
 
 This plugin allows almost full control of **AVM** hardware like:
 
@@ -92,41 +107,6 @@ This plugin allows almost full control of **AVM** hardware like:
 
 Any system capable of running [Homebridge](https://github.com/nfarina/homebridge/) can be used to run **homebridge-fritz-platform**. The only need is network access to the device or program in question.
 
-
-## Changelog
-
-See the [changelog](https://github.com/SeydX/homebridge-fritz-platform/blob/master/CHANGELOG.md) for changes between versions of this package.
-
-**<u>NOTE:</u>** Updating from **< v5.x** to **>= v5.x** will crash your homebridge, please **REMOVE** the old version first and check also the new [example-config.json](https://github.com/SeydX/homebridge-fritz-platform/blob/master/example/example-config.json) !
-
-
-
-## Documentation
-
-- [Supported HomeKit Apps](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/Apps.md)
-- [Tested Devices](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/Supported.md)
-- [Installation instruction](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/Installation.md)
-- [First Start](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/FirtStart.md)
-- [Configuring Callmonitor](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/Callmonitor.md)
-- <u>Examples</u>
-   * [Example config.json](https://github.com/SeydX/homebridge-fritz-platform/blob/master/example/example-config.json)
-   * [Multiple instances (for extended reboot)](https://github.com/SeydX/homebridge-fritz-platform/blob/master/example/MultipleInstances.md)
-   * [Telegram Notification instructions](https://github.com/SeydX/homebridge-fritz-platform/blob/master/docs/Telegram.md)
-- [Debugging](https://github.com/SeydX/homebridge-fritz-platform/blob/master/DEBUG.md)
-
-
-
-## Contributing
-
-You can contribute to this homebridge plugin in following ways:
-
-- [Report issues](https://github.com/SeydX/homebridge-fritz-platform/issues) and help verify fixes as they are checked in.
-- Review the [source code changes](https://github.com/SeydX/homebridge-fritz-platform/pulls).
-- Contribute bug fixes.
-- Contribute changes to extend the capabilities
-- Pull requests are accepted.
-
-This Plugin uses modules from others, see [CONTRIBUTING](https://github.com/SeydX/homebridge-fritz-platform/blob/master/CONTRIBUTING.md) for credits.
 
 
 ## Disclaimer
