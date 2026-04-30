@@ -1,5 +1,19 @@
 # Changelog
 
+# v6.1.0 - 2026-04-30
+
+## Notable Changes
+- **Homebridge v2 support**
+  - The plugin is now compatible with Homebridge v2 / HAP-NodeJS v1 while remaining backward compatible with Homebridge v1.
+  - Custom Services and Characteristics rewritten using ES6 class syntax (HAP-NodeJS v1 made `Service` and `Characteristic` ES6 classes that cannot be invoked without `new`).
+  - Replaced deprecated `Service.BatteryService` with `Service.Battery`.
+  - Replaced deprecated `Characteristic.Formats/Units/Perms` with `hap.Formats/Units/Perms`.
+  - Bumped `engines`: `homebridge: ^1.6.0 || ^2.0.0-beta.0`, `node: ^18.20.4 || ^20.15.1 || ^22`.
+
+## Other Changes
+- Logger now silently ignores transient FritzBox network errors (`EPIPE`, `ECONNRESET`, `ETIMEDOUT`, `ECONNABORTED`, `ECONNREFUSED`, `EHOSTUNREACH`, `ENETUNREACH`, `EAI_AGAIN`, and `'No Response'`). They are still visible when `debug` is enabled.
+- Updated runtime dependencies (`fakegato-history`, `form-data`, `fs-extra`, `moment`).
+
 # v6.0.18 - 2021-10-06
 
 ## Bugfixes

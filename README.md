@@ -18,6 +18,8 @@
 
 ## Info
 
+> Compatible with **Homebridge v1.6+** and **Homebridge v2**. Requires **Node.js 18.20+, 20.15+ or 22**.
+
 This plugin allows almost full control of **AVM** hardware like:
 
 - **Fritz!Box**

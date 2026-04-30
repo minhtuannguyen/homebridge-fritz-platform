@@ -37,14 +37,14 @@ class Accessory {
     const buttons = this.accessory.context.config.buttons;
 
     if (buttons && this.accessory.context.config.battery) {
-      let batteryService = this.accessory.getService(this.api.hap.Service.BatteryService);
+      let batteryService = this.accessory.getService(this.api.hap.Service.Battery);
 
       if (!batteryService) {
         logger.info(
           'Adding Battery service',
           `${this.accessory.displayName} (${this.accessory.context.config.subtype})`
         );
-        batteryService = this.accessory.addService(this.api.hap.Service.BatteryService);
+        batteryService = this.accessory.addService(this.api.hap.Service.Battery);
       }
 
       batteryService.setCharacteristic(
@@ -52,8 +52,8 @@ class Accessory {
         this.api.hap.Characteristic.ChargingState.NOT_CHARGEABLE
       );
     } else {
-      if (this.accessory.getService(this.api.hap.Service.BatteryService)) {
-        this.accessory.removeService(this.accessory.getService(this.api.hap.Service.BatteryService));
+      if (this.accessory.getService(this.api.hap.Service.Battery)) {
+        this.accessory.removeService(this.accessory.getService(this.api.hap.Service.Battery));
       }
     }
 

@@ -1,5 +1,32 @@
 'use strict';
 
+const TRANSIENT_NETWORK_CODES = new Set([
+  'EPIPE',
+  'ECONNRESET',
+  'ETIMEDOUT',
+  'ECONNABORTED',
+  'ECONNREFUSED',
+  'EHOSTUNREACH',
+  'ENETUNREACH',
+  'EAI_AGAIN',
+]);
+
+const isTransientNetworkError = (message) => {
+  if (!message || typeof message !== 'object') {
+    return false;
+  }
+
+  if (message.code && TRANSIENT_NETWORK_CODES.has(message.code)) {
+    return true;
+  }
+
+  if (message.title === 'No Response') {
+    return true;
+  }
+
+  return false;
+};
+
 class Logger {
   constructor() {
     this.log = console;
@@ -46,12 +73,22 @@ class Logger {
   }
 
   warn(message, accessoryName) {
+    if (isTransientNetworkError(message)) {
+      this.debug(message, accessoryName);
+      return;
+    }
+
     if (this.warnMode) {
       this.log.warn(this.formatMessage(message, accessoryName, 'warn'));
     }
   }
 
   error(message, accessoryName) {
+    if (isTransientNetworkError(message)) {
+      this.debug(message, accessoryName);
+      return;
+    }
+
     if (this.errorMode) {
       this.log.error(this.formatMessage(message, accessoryName, 'error'));
     }
