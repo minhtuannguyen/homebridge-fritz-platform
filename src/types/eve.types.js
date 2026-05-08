@@ -11,7 +11,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.UINT32,
         unit: hap.Units.SECONDS,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -24,7 +24,7 @@ exports.registerWith = (hap) => {
       super('History Status', 'E863F116-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -37,7 +37,7 @@ exports.registerWith = (hap) => {
       super('History Entries', 'E863F117-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -50,7 +50,7 @@ exports.registerWith = (hap) => {
       super('History Request', 'E863F11C-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -63,7 +63,7 @@ exports.registerWith = (hap) => {
       super('Set Time', 'E863F121-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -77,7 +77,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.UINT32,
         unit: hap.Units.SECONDS,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -90,7 +90,7 @@ exports.registerWith = (hap) => {
       super('Times Opened', 'E863F129-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.UINT32,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -104,7 +104,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.UINT32,
         unit: hap.Units.SECONDS,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -118,7 +118,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.UINT32,
         unit: hap.Units.SECONDS,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY, hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY, hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -132,7 +132,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.FLOAT,
         unit: 'W',
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -146,7 +146,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.FLOAT,
         unit: 'kWh',
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -160,7 +160,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.FLOAT,
         unit: 'V',
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -174,7 +174,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.FLOAT,
         unit: 'A',
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -188,7 +188,7 @@ exports.registerWith = (hap) => {
       this.setProps({
         format: hap.Formats.UINT8,
         unit: hap.Units.PERCENTAGE,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
@@ -201,7 +201,7 @@ exports.registerWith = (hap) => {
       super('Program Command', 'E863F12C-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.WRITE],
+        perms: [hap.Perms.PAIRED_WRITE],
       });
       this.value = this.getDefaultValue();
     }
@@ -214,7 +214,7 @@ exports.registerWith = (hap) => {
       super('Program Data', 'E863F12F-079E-48FF-8F27-9C2605A29F52');
       this.setProps({
         format: hap.Formats.DATA,
-        perms: [hap.Perms.READ, hap.Perms.NOTIFY],
+        perms: [hap.Perms.PAIRED_READ, hap.Perms.NOTIFY],
       });
       this.value = this.getDefaultValue();
     }
