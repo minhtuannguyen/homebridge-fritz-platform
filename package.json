@@ -3,33 +3,19 @@
   "version": "6.1.0",
   "description": "Homebridge Plugin to control FritzBox router, smarthome devices and more.",
   "main": "index.js",
-  "funding": [
-    {
-      "type": "paypal",
-      "url": "https://paypal.me/seydx"
-    },
-    {
-      "type": "kofi",
-      "url": "https://ko-fi.com/seydx"
-    },
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/seydx"
-    }
-  ],
   "scripts": {
     "lint": "eslint --fix ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeydX/homebridge-fritz-platform.git"
+    "url": "git+https://github.com/minhtuannguyen/homebridge-fritz-platform.git"
   },
-  "author": "SeydX (https://github.com/SeydX/homebridge-fritz-platform)",
+  "author": "minhtuannguyen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SeydX/homebridge-fritz-platform/issues"
+    "url": "https://github.com/minhtuannguyen/homebridge-fritz-platform/issues"
   },
-  "homepage": "https://github.com/SeydX/homebridge-fritz-platform#readme",
+  "homepage": "https://github.com/minhtuannguyen/homebridge-fritz-platform#readme",
   "keywords": [
     "fritz",
     "fritzbox",
