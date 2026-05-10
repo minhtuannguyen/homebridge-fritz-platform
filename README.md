@@ -24,6 +24,21 @@ sudo npm link                # exposes the package globally
 sudo npm link homebridge-fritz-platform   # in your homebridge user dir
 sudo hb-service restart
 ```
+#### On a Raspberry Pi (or any Linux machine running Homebridge as the `homebridge` user)
+
+```bash
+git clone https://github.com/minhtuannguyen/homebridge-fritz-platform.git 
+cd homebridge-fritz-platform
+
+npm install
+
+sudo -u homebridge npm link
+
+cd /var/lib/homebridge
+sudo -u homebridge npm link /path/to/homebridge-fritz-platform
+
+sudo hb-service restart
+```
 
 After installing you may need to **remove the old plugin entry** in the Homebridge UI, because the original `homebridge-fritz-platform` package on npm and this fork share the same plugin name.
 
