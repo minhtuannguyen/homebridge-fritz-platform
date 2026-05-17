@@ -4,6 +4,10 @@
 
 # homebridge-fritz-platform
 
+[![npm](https://img.shields.io/npm/v/@minguyen68/homebridge-fritz-platform.svg?style=flat-square)](https://www.npmjs.com/package/@minguyen68/homebridge-fritz-platform)
+[![npm](https://img.shields.io/npm/dt/@minguyen68/homebridge-fritz-platform.svg?style=flat-square)](https://www.npmjs.com/package/@minguyen68/homebridge-fritz-platform)
+[![GitHub last commit](https://img.shields.io/github/last-commit/minhtuannguyen/homebridge-fritz-platform.svg?style=flat-square)](https://github.com/minhtuannguyen/homebridge-fritz-platform)
+
 > ⚠️ **This is a community fork** of the original [SeydX/homebridge-fritz-platform](https://github.com/SeydX/homebridge-fritz-platform), updated to work with **Homebridge v2** (released May 2026) and HAP-NodeJS v1. The original project is no longer actively maintained for v2. All credit for the plugin goes to the original author [@SeydX](https://github.com/SeydX).
 
 ## Info
