@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-fritz-platform",
+  "name": "@minguyen68/homebridge-fritz-platform",
   "version": "6.1.0",
-  "description": "Homebridge Plugin to control FritzBox router, smarthome devices and more.",
+  "description": "Homebridge v2 Plugin to control FritzBox router, smarthome devices and more (community fork).",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix ."

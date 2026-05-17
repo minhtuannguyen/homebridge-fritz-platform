@@ -12,9 +12,23 @@
 
 ### Installing this fork
 
-Since this fork is not published on npm, install it directly from GitHub.
+**Option 1: From Homebridge UI (easiest - recommended)**
 
-**Local clone (development / testing):**
+1. Open Homebridge UI in your browser
+2. Go to **Plugins** → **Install Plugin**
+3. Search for `@minguyen68/homebridge-fritz-platform`
+4. Click **Install**
+5. Restart Homebridge
+6. Configure the plugin with your FritzBox IP, username, and password
+
+**Option 2: From npm**
+
+```bash
+sudo npm install -g @minguyen68/homebridge-fritz-platform
+sudo hb-service restart
+```
+
+**Option 3: Local clone (development / testing)**
 
 ```bash
 git clone https://github.com/minhtuannguyen/homebridge-fritz-platform.git
@@ -40,7 +54,7 @@ sudo -u homebridge npm link /path/to/homebridge-fritz-platform
 sudo hb-service restart
 ```
 
-After installing you may need to **remove the old plugin entry** in the Homebridge UI, because the original `homebridge-fritz-platform` package on npm and this fork share the same plugin name.
+After installing, you may need to **remove any old plugin entry** in the Homebridge UI from the original `homebridge-fritz-platform` package, as this scoped package uses a different namespace.
 
 This plugin allows almost full control of **AVM** hardware like:
 
