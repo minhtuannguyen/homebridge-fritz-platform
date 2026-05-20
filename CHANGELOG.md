@@ -1,5 +1,11 @@
 # Changelog
 
+# v6.1.2 - 2026-05-20
+
+## Notable Changes
+- Added support for Node.js 24
+  - `engines`: `node: ^18.20.4 || ^20.15.1 || ^22 || ^24`
+
 # v6.1.0 - 2026-04-30
 
 ## Notable Changes
